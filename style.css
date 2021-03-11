@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(71, 122, 122);
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 60%;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#meme-image-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  background-color: whitesmoke;
+  border: solid 1px black;
+  border-radius: 5px;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+.content {
+  text-align: left;
+}
+
+#meme-text {
+  position: absolute;
+  background-size: cover;
+  margin-top: 70%;
+  font-size: 35px;
+  overflow-wrap: break-word;
+  color: cyan;
+}
+
+#output{
+  width: 0;
+}
