@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+/* Testes */
+
+#text-input {
+  margin: 20px 50px;
+  font-size: 50px;
+}
+
+#meme-insert {
+  display: block;
+  margin: 20px 50px;
+}
+
+#meme-image-container {
+  margin: 20px 50px;
+  width: 400px;
+  height: 400px;
+}
+
+#meme-image {
+  width: 100%;
+}
