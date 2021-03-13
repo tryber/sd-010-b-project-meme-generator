@@ -1,0 +1,91 @@
+body {
+  background-image: url("img/wp3298162-background-meme.jpg");
+}
+
+input {
+  margin-top: 20px;
+}
+
+label {
+  color: white;
+}
+
+#title , #inputs {
+  margin: auto;
+  text-align: center;
+}
+
+#title {
+  font-size: 15px;
+  color: white;
+  border: black 1px solid;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(101 , 54 , 105);
+}
+
+#meme-image-container {
+  border: 1px solid black;
+  background-color: white;
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+  z-index: -1;
+  height: 400px;
+  width: 400px;
+}
+
+#meme-image {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+}
+
+#meme-text {
+  position: absolute;
+  top: 300px;
+  width: 400px;
+  word-wrap: normal;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  z-index: 2;
+}
+
+#meme-insert {
+  color: white;
+}
+
+#buttons {
+  width: fit-content;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  align-content: center;
+}
+
+#fire {
+  background-color: red;
+  border: none;
+  width: 60px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+#water {
+  background-color: blue;
+  border: none;
+  width: 60px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+#earth {
+  background-color: green;
+  border: none;
+  width: 60px;
+  height: 20px;
+  margin-left: 5px;
+}
