@@ -1,0 +1,18 @@
+#meme-image-container {
+  margin: 50px 0 0;
+  border: 1px solid black;
+  background-color: white;
+  min-width: 200px;
+  width: fit-content;
+  height: fit-content;
+}
+
+#meme-text {
+  font-size: 20px;
+  font-family: Rubik, sans-serif;
+  -webkit-text-stroke: 2px black;
+  color: white;
+  text-transform: uppercase;
+  max-width: fit-content;
+  margin: auto;
+}
