@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Meme Generator</title>
+</head>
+<body>
+    <h1>Meme generator</h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        Texto:
+        <input type="text" id="text-input" maxlength="60">
+        <br>
+        <br>
+        Imagem: <input id="meme-insert" type="file" name="picture" id="picture">
+    </form>
+
+    <div id="meme-image-container">
+        <p id="meme-text"></p>
+        <img id="meme-image" src="">
+    </div>
+
+    <div class="customized">
+        <p>Estilos customizados:</p>
+        <button id="fire">Fire</button>
+        <button id="water">Water</button>
+        <button id="earth">Earth</button>
+    </div>
+
+    <p>Memes pré prontos</p>
+    <div class="memes-pre-definidos">
+        <img id="meme-1" src="/imgs/meme1.png" alt="meme1">
+        <img id="meme-2" src="/imgs/meme2.png" alt="meme2">
+        <img id="meme-3" src="/imgs/meme3.png" alt="meme3">
+        <img id="meme-4" src="/imgs/meme4.png" alt="meme4">
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
