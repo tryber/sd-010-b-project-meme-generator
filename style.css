@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1366px;
+  height: 768px;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+
+.box-input {
+  width: 300px;
+  margin: 20px;
+  font-size: 2em;
+}
+
+#meme-image-container {
+  width: 450px;
+  height: 450px;
+  margin: 20px auto;
+  border: 1px black solid;
+}
