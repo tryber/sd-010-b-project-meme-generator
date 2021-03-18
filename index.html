@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Meme-Generator</title>  
+</head>
+<body>
+  <header>
+    <h1>Meme-Generator!</h1>
+  </header>
+  <div id="btn-config">
+    <input type="text" id="text-input" placeholder="Texto do meme..." maxlength="60">
+    <input type="file" name="" id="meme-insert" onchange="document.getElementById('meme-image').src = window.URL.createObjectURL(this.files[0])">
+  </div>  
+  <div id="meme-image-container">
+      <img id="meme-image" src="" alt="Imagem do meme">      
+      <p id="meme-text"></p>    
+  </div>
+  <div id="borderBtn-container">
+    <button id="fire" class="btn dashed 3px red">Red</button>
+    <button id="water" class="btn double 5px blue">Blue</button>
+    <button id="earth" class="btn groove 6px green">Green</button>
+  </div>
+  <div id="label">
+    <label for="ready-memes"><h1>Memes pré montados:</h1></label>
+  </div>  
+  <div id="ready-memes">
+    <img src="/imgs/meme1.png" alt="foto meme-1" class="meme-1" id="meme-1">
+    <img src="/imgs/meme2.png" alt="foto meme-2" class="meme-1" id="meme-2">
+    <img src="/imgs/meme3.png" alt="foto meme-3" class="meme-1" id="meme-3">
+    <img src="/imgs/meme4.png" alt="foto meme-4" class="meme-1" id="meme-4">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
