@@ -1,0 +1,51 @@
+h1{
+    font-weight: bold;
+    text-align: center;
+}
+#meme-image-container{
+    border: 1px solid  black;
+   background-color: white;
+    width: 600px;
+    height: 500px;/*existem casos em que é bom usar height. Esse caso é um deles. Então sempre fique atento a isso. */
+    position: relative;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+}
+
+
+#meme-text{
+    margin-top: 200px;
+    font-size: 30px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 120px;
+    text-shadow:5px 5px 5px black;
+}
+button{
+    font-size: 20px;
+    margin: 15px;
+    padding: 10px;
+}
+#text-input:hover{
+   border-color: rgb(255, 8, 0);
+}
+.customizacao{
+    margin-left: 15px;
+}
+
+#fire{
+background-color: red;
+color: white;
+}
+#water{
+background-color: #6f42c1;
+color: white;
+}
+#earth{
+background-color: green;
+color: white;
+}
