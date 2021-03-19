@@ -13,7 +13,6 @@ body {
   box-sizing: border-box;
   width: 500px;
   height: 500px;
-  text-align: center;
   border: 1px solid black;
   overflow: hidden;
   background-color: white;
