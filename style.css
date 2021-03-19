@@ -23,13 +23,7 @@ body {
   width: 500px;
 }
 
-#meme-insert {
-  background-color: rgb(34 , 95 , 119);
-  box-sizing: border-box;
-  text-align: center;
-}
-
-#meme-image-container p {
+#meme-text {
   position: absolute;
   font-size: 42px;
   color: white;
