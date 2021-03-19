@@ -11,9 +11,8 @@ body {
 #meme-image-container {
   position: relative;
   box-sizing: border-box;
-  max-width: 500px;
+  width: 500px;
   height: 500px;
-  width: 100%;
   text-align: center;
   border: 1px solid black;
 }
@@ -21,7 +20,7 @@ body {
 #meme-image {
   z-index: 1;
   max-width: 500px;
-  width: 100%;
+  width: 500px;
 }
 
 #meme-insert {
