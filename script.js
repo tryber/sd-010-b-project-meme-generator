@@ -1,6 +1,6 @@
 const areaDigitavel = document.getElementById('text-input');
-// const fotoSelecionada = document.getElementById('meme-image');
-// const memeImageContainer = document.getElementById('meme-image-container');
+const fotoSelecionada = document.getElementById('#meme-image');
+const memeImageContainer = document.getElementById('meme-image-container');
 const retornaTextoDigitado = document.getElementById('meme-text');
 const memeInsert = document.getElementById('meme-insert');
 // console.log(retornaTextoDigitado + 'oi');
@@ -12,16 +12,19 @@ function inputDeEntrada() {
 
 function criaImagem() {
   // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
-  const fotoRetonor = document.querySelector('img#meme-image');
-  const file = document.querySelector('#meme-insert[type=file]').files[0];
-  const reader = new FileReader();
-  reader.onloadend = function func() {
-    fotoRetonor.src = reader.result;
+  const criaImg = document.createElement('img');
+  const imgFilho = memeImageContainer.appendChild(criaImg);
+  imgFilho.id = fotoSelecionada;
+  const fotoVisual = document.querySelector('#meme-image');
+  const carregarFoto = document.querySelector('input[type=file]').files[0];
+  const lerInput = new FileReader();
+  lerInput.onloadend = function func() {
+    fotoVisual.src = lerInput.result;
   };
-  if (file) {
-    reader.readAsDataURL(file);
+  if (carregarFoto) {
+    lerInput.readAsDataURL(carregarFoto);
   } else {
-    fotoRetonor.src = '';
+    fotoVisual.src = '';
   }
 }
 window.onload = function inicio() {
