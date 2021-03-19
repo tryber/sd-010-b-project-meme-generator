@@ -15,7 +15,7 @@ function criaImagem() {
   const criaImg = document.createElement('img');
   const imgFilho = memeImageContainer.appendChild(criaImg);
   imgFilho.id = fotoSelecionada;
-  const fotoVisual = document.querySelector('#meme-image');
+  const fotoVisual = document.querySelector('img#meme-image');
   const carregarFoto = document.querySelector('#meme-insert[type=file]').files[0];
   const lerInput = new FileReader();
   lerInput.onloadend = function func() {

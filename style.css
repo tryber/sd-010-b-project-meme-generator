@@ -11,7 +11,7 @@ body {
 #meme-image-container {
   position: relative;
   box-sizing: border-box;
-  width: 500px;
+  max-width: 500px;
   height: 500px;
   border: 1px solid black;
   overflow: hidden;
@@ -31,7 +31,6 @@ body {
   color: white;
   text-shadow: 5px 5px 5px black;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
   margin-left: 15px;
   bottom: 8px;
 }
