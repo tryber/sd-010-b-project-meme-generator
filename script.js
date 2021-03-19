@@ -10,6 +10,13 @@ function inputDeEntrada() {
   retornaTextoDigitado.innerHTML = areaDigit;
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+function criaBorda(e) {
+  const elementoAlvo = e.target;
+  const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
+  memeImageContainer.style.border = cssSuporte;
+}
+
 function criaImagem() {
   // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
   const criaImg = document.createElement('img');
@@ -28,6 +35,8 @@ function criaImagem() {
   }
 }
 window.onload = function inicio() {
+  const botao = document.querySelectorAll('button');
+  botao.forEach((elementoAlvo) => elementoAlvo.addEventListener('click', criaBorda));
   areaDigitavel.addEventListener('input', inputDeEntrada);
   memeInsert.addEventListener('input', criaImagem);
 };
