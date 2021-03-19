@@ -17,24 +17,22 @@ body {
   border: 1px solid black;
   overflow: hidden;
   background-color: white;
-  text-overflow: unset;
+  text-overflow: clip;
 }
 
 #meme-image {
-  z-index: 1;
+  z-index: -1;
   max-width: 500px;
   width: 500px;
 }
 
 #meme-text {
   position: absolute;
-  font-size: 42px;
+  font-size: 30px;
   color: white;
-  text-shadow: 3px 3px 3px black;
+  text-shadow: 5px 5px 5px black;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   margin-left: 15px;
-  z-index: 2;
-  width: 490px;
-  bottom: 10px;
+  bottom: 8px;
 }
