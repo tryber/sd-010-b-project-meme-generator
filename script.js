@@ -12,7 +12,7 @@ function inputDeEntrada() {
 
 function criaImagem() {
   // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
-  const fotoRetonor = document.querySelector('img');
+  const fotoRetonor = document.querySelector('img#meme-image');
   const file = document.querySelector('input[type=file]').files[0];
   const reader = new FileReader();
   reader.onloadend = function func() {

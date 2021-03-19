@@ -5,4 +5,29 @@ body {
   height: 100%;
   margin: auto;
   border: solid 1px grey;
+  align-items: center;
+}
+
+#meme-image-container {
+  background-color: #272;
+  box-sizing: border-box;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+#meme-image {
+  background-color: #272;
+  box-sizing: border-box;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+#meme-insert {
+  background-color: rgb(34, 95, 119);
+  box-sizing: border-box;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
 }
