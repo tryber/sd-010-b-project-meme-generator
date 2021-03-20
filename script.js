@@ -1,5 +1,5 @@
 const areaDigitavel = document.getElementById('text-input');
-const fotoSelecionada = document.getElementById('meme-image');
+const fotoSelecionada = 'meme-image';
 const memeImageContainer = document.getElementById('meme-image-container');
 const retornaTextoDigitado = document.getElementById('meme-text');
 const memeInsert = document.getElementById('meme-insert');
@@ -16,6 +16,7 @@ function apagaElemento() {
     document.getElementById(fotoSelecionada).remove();
   }
 }
+apagaElemento();
 
 // carrega a imagem selecionada no computador
 // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
@@ -48,9 +49,7 @@ function criaBorda(e) {
 // cria os botões interligados com a borda
 function botaoBorda() {
   const botao = document.querySelectorAll('button');
-  botao.forEach((elementoAlvo) => {
-    elementoAlvo.addEventListener('click', criaBorda);
-  });
+  botao.forEach((elementoAlvo) => elementoAlvo.addEventListener('click', criaBorda));
 }
 // cria miniatura
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/cloneNode
@@ -63,6 +62,7 @@ function criaMiniaturas(e) {
 }
 // retorna miniatua natela
 function retornaMini() {
+  apagaElemento();
   const pegaMini = document.querySelectorAll('#samples img');
   pegaMini.forEach((elementoAlvo) => {
     elementoAlvo.addEventListener('click', criaMiniaturas);
