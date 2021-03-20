@@ -16,7 +16,6 @@ function apagaElemento() {
     document.getElementById(fotoSelecionada).remove();
   }
 }
-apagaElemento();
 
 // carrega a imagem selecionada no computador
 // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
@@ -62,7 +61,6 @@ function criaMiniaturas(e) {
 }
 // retorna miniatua natela
 function retornaMini() {
-  apagaElemento();
   const pegaMini = document.querySelectorAll('#samples img');
   pegaMini.forEach((elementoAlvo) => {
     elementoAlvo.addEventListener('click', criaMiniaturas);
