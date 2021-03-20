@@ -30,7 +30,7 @@ function apagaElemento() {
 apagaElemento();
 
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/cloneNode
-function retornaMiniaturas(e) {
+function criaMiniaturas(e) {
   const mini = e.target;
   const clona = mini.cloneNode(true);
   const cloneFilho = document.getElementById('meme-image-container').appendChild(clona);
@@ -39,9 +39,7 @@ function retornaMiniaturas(e) {
 
 function retonrnaMini() {
   const pegaMini = document.querySelectorAll('#samples img');
-  pegaMini.forEach(elementoAlvo) => {
-    elementoAlvo.addEventListener('click', retornaMiniaturas);
-  }
+  pegaMini.forEach((elementoAlvo) => elementoAlvo.addEventListener('click', criaMiniaturas));
 }
 
 function criaImagem() {
