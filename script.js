@@ -17,6 +17,11 @@ function criaBorda(e) {
   memeImageContainer.style.border = cssSuporte;
 }
 
+function botaoBorda() {
+  const botao = document.querySelectorAll('button');
+  botao.forEach((elementoAlvo) => elementoAlvo.addEventListener('click', criaBorda));
+}
+
 function criaImagem() {
   // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
   const criaImg = document.createElement('img');
@@ -35,8 +40,7 @@ function criaImagem() {
   }
 }
 window.onload = function inicio() {
-  const botao = document.querySelectorAll('button');
-  botao.forEach((elementoAlvo) => elementoAlvo.addEventListener('click', criaBorda));
+  botaoBorda();
   areaDigitavel.addEventListener('input', inputDeEntrada);
   memeInsert.addEventListener('input', criaImagem);
 };
