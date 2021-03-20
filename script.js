@@ -1,5 +1,5 @@
 const areaDigitavel = document.getElementById('text-input');
-const fotoSelecionada = 'meme-image';
+const fotoSelecionada = document.getElementById('meme-image');
 const memeImageContainer = document.getElementById('meme-image-container');
 const retornaTextoDigitado = document.getElementById('meme-text');
 const memeInsert = document.getElementById('meme-insert');
@@ -8,22 +8,6 @@ const memeInsert = document.getElementById('meme-insert');
 function inputDeEntrada() {
   const areaDigit = areaDigitavel.value;
   retornaTextoDigitado.innerHTML = areaDigit;
-}
-
-// cria o efeito borda
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
-function criaBorda(e) {
-  const elementoAlvo = e.target;
-  const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
-  memeImageContainer.style.border = cssSuporte;
-}
-
-// cria os botões interligados com a borda
-function botaoBorda() {
-  const botao = document.querySelectorAll('button');
-  botao.forEach((elementoAlvo) => {
-    elementoAlvo.addEventListener('click', criaBorda);
-  });
 }
 
 // limpa a imagem grande na tela
@@ -51,6 +35,22 @@ function criaImagem() {
   } else {
     fotoVisual.src = '';
   }
+}
+
+// cria o efeito borda
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+function criaBorda(e) {
+  const elementoAlvo = e.target;
+  const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
+  memeImageContainer.style.border = cssSuporte;
+}
+
+// cria os botões interligados com a borda
+function botaoBorda() {
+  const botao = document.querySelectorAll('button');
+  botao.forEach((elementoAlvo) => {
+    elementoAlvo.addEventListener('click', criaBorda);
+  });
 }
 
 // cria miniatura
