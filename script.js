@@ -22,6 +22,13 @@ function botaoBorda() {
   botao.forEach((elementoAlvo) => elementoAlvo.addEventListener('click', criaBorda));
 }
 
+function apagaElemento() {
+  if (document.getElementById(memeInsert)) {
+    document.getElementById(memeInsert).remove();
+  }
+}
+apagaElemento();
+
 function criaImagem() {
   // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
   const criaImg = document.createElement('img');
