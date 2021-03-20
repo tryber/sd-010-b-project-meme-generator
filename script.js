@@ -10,8 +10,17 @@ function inputDeEntrada() {
   retornaTextoDigitado.innerHTML = areaDigit;
 }
 
+// limpa a imagem grande na tela
+function apagaElemento() {
+  if (document.getElementById(fotoSelecionada)) {
+    document.getElementById(fotoSelecionada).remove();
+  }
+}
+
+// carrega a imagem selecionada no computador
+// https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
 function criaImagem() {
-  // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
+  apagaElemento();
   const criaImg = document.createElement('img');
   const imgFilho = memeImageContainer.appendChild(criaImg);
   imgFilho.id = fotoSelecionada;
@@ -27,14 +36,15 @@ function criaImagem() {
     fotoVisual.src = '';
   }
 }
-// cria o efeito borda
 
+// cria o efeito borda
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 function criaBorda(e) {
   const elementoAlvo = e.target;
   const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
   memeImageContainer.style.border = cssSuporte;
 }
+
 // cria os botões interligados com a borda
 function botaoBorda() {
   const botao = document.querySelectorAll('button');
@@ -45,6 +55,7 @@ function botaoBorda() {
 // cria miniatura
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/cloneNode
 function criaMiniaturas(e) {
+  apagaElemento();
   const mini = e.target;
   const clona = mini.cloneNode(true);
   const cloneFilho = document.getElementById('meme-image-container').appendChild(clona);
@@ -60,6 +71,7 @@ function retornaMini() {
 
 // cria um auto carrega
 window.onload = function inicio() {
+  apagaElemento();
   retornaMini();
   botaoBorda();
   areaDigitavel.addEventListener('input', inputDeEntrada);
