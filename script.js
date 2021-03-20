@@ -37,7 +37,9 @@ function retornaMiniaturas(e) {
   cloneFilho.id = memeInsert;
 }
 
-function retonrnaMini()
+function retonrnaMini() {
+  const pegaMini = document.querySelectorAll(#);
+}
 
 function criaImagem() {
   // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL

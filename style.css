@@ -34,3 +34,27 @@ body {
   margin-left: 15px;
   bottom: 8px;
 }
+
+#samples img {
+  padding: 5px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#fire {
+  border 3px dashed red;
+  background-color: red;
+  color: white;
+}
+
+#water {
+  border: 5px double blue;
+  background-color: blue;
+  color: white;
+}
+
+#eart {
+  border: 6px groove green;
+  background-color: green;
+  color: white;
+}
