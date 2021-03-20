@@ -10,7 +10,6 @@ body {
 
 #meme-image-container {
   position: relative;
-  box-sizing: border-box;
   max-width: 500px;
   height: 500px;
   border: 1px solid black;
