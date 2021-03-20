@@ -12,7 +12,7 @@ function inputDeEntrada() {
 
 // limpa a imagem grande na tela
 function apagaElemento() {
-  if (document.getElementById(fotoSelecionada)) {
+  if (document.getElementById('meme-image')) {
     document.getElementById(fotoSelecionada).remove();
   }
 }
