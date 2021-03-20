@@ -5,23 +5,9 @@ const retornaTextoDigitado = document.getElementById('meme-text');
 const memeInsert = document.getElementById('meme-insert');
 // console.log(retornaTextoDigitado + 'oi');
 // console.log(fotoSelecionada + 'oi');
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 function inputDeEntrada() {
   const areaDigit = areaDigitavel.value;
   retornaTextoDigitado.innerHTML = areaDigit;
-}
-
-function criaBorda(e) {
-  const elementoAlvo = e.target;
-  const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
-  memeImageContainer.style.border = cssSuporte;
-}
-
-function botaoBorda() {
-  const botao = document.querySelectorAll('button');
-  botao.forEach((elementoAlvo) => {
-    elementoAlvo.addEventListener('click', criaBorda);
-  });
 }
 
 function criaImagem() {
@@ -41,8 +27,40 @@ function criaImagem() {
     fotoVisual.src = '';
   }
 }
+// cria o efeito borda
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+function criaBorda(e) {
+  const elementoAlvo = e.target;
+  const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
+  memeImageContainer.style.border = cssSuporte;
+}
+// cria os botões interligados com a borda
+function botaoBorda() {
+  const botao = document.querySelectorAll('button');
+  botao.forEach((elementoAlvo) => {
+    elementoAlvo.addEventListener('click', criaBorda);
+  });
+}
+// cria miniatura
+// https://developer.mozilla.org/pt-BR/docs/Web/API/Node/cloneNode
+function criaMiniaturas(e) {
+  const mini = e.target;
+  const clona = mini.cloneNode(true);
+  const cloneFilho = document.getElementById('meme-image-container').appendChild(clona);
+  cloneFilho.id = fotoSelecionada;
+}
+// retorna miniatua natela
+function retornaMini() {
+  const pegaMini = document.querySelectorAll('#samples img');
+  pegaMini.forEach((elementoAlvo) => {
+    elementoAlvo.addEventListener('click', criaMiniaturas);
+  });
+}
+
+// cria um auto carrega
 window.onload = function inicio() {
+  retornaMini();
   botaoBorda();
   areaDigitavel.addEventListener('input', inputDeEntrada);
   memeInsert.addEventListener('input', criaImagem);
