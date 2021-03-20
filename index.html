@@ -7,22 +7,24 @@
     <title>[ DiegoSerafim ]-meme-generator-project</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+    <body>
+
+    <main>
     <header>
         <h1>Meme Generator</h1>
     </header>
     <section>
         <div>
             <label for="text-input">Texto: </label>
-            <input id="text-input" type="text" name="texto" placeholder="Insira a frase" maxlength="60">
+            <input type="text" id="text-input" placeholder="Insira a frase" maxlength="60">
         </div>
         <div>
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept -->
             <label for="meme-insert">Foto: </label>
-            <input id="meme-insert" type="file" name="img" accept="image/*">
+            <input type="file" id="meme-insert" name="img" accept="image/*">
         </div>
         <div id="meme-image-container">
-            <img src="" id="meme-image">
+            <img src="" id="meme-image" alt="same as filename">
             <p id="meme-text"></p>
         </div>
     </section>
@@ -34,13 +36,15 @@
     </nav>
     <section>
         <div id="samples">
-            <img src="imgs/meme1.png" id="meme-1">
-            <img src="imgs/meme2.png" id="meme-2">
-            <img src="imgs/meme3.png" id="meme-3">
-            <img src="imgs/meme4.png" id="meme-4">
+            <img src="imgs/meme1.png" id="meme-1" alt="">
+            <img src="imgs/meme2.png" id="meme-2" alt="">
+            <img src="imgs/meme3.png" id="meme-3" alt="">
+            <img src="imgs/meme4.png" id="meme-4" alt="">
         </div>
     </section>
     <footer>Trybe / Projeto-03 [Diego-Serafim]-meme-generator-project, iniciado em 16/03 - finalizado em</footer>
     <script src="script.js"></script>
-</body>
+    </main>
+
+    </body>
 </html>
