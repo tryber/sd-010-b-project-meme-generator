@@ -29,6 +29,16 @@ function apagaElemento() {
 }
 apagaElemento();
 
+// https://developer.mozilla.org/pt-BR/docs/Web/API/Node/cloneNode
+function retornaMiniaturas(e) {
+  const mini = e.target;
+  const clona = mini.cloneNode(true);
+  const cloneFilho = document.getElementById('meme-image-container').appendChild(clona);
+  cloneFilho.id = memeInsert;
+}
+
+function retonrnaMini()
+
 function criaImagem() {
   // https://developer.mozilla.org/pt-BR/docs/Web/API/FileReader/readAsDataURL
   const criaImg = document.createElement('img');
@@ -46,6 +56,7 @@ function criaImagem() {
     fotoVisual.src = '';
   }
 }
+
 window.onload = function inicio() {
   botaoBorda();
   areaDigitavel.addEventListener('input', inputDeEntrada);
