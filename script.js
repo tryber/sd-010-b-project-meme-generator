@@ -38,7 +38,10 @@ function retornaMiniaturas(e) {
 }
 
 function retonrnaMini() {
-  const pegaMini = document.querySelectorAll(#);
+  const pegaMini = document.querySelectorAll('#samples img');
+  pegaMini.forEach(elementoAlvo) => {
+    elementoAlvo.addEventListener('click', retornaMiniaturas);
+  }
 }
 
 function criaImagem() {
@@ -60,6 +63,7 @@ function criaImagem() {
 }
 
 window.onload = function inicio() {
+  retonrnaMini();
   botaoBorda();
   areaDigitavel.addEventListener('input', inputDeEntrada);
   memeInsert.addEventListener('input', criaImagem);
