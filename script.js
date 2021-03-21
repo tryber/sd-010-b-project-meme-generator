@@ -72,7 +72,6 @@ function retornaMini() {
 
 // cria um auto carrega
 window.onload = function inicio() {
-  apagaElemento();
   retornaMini();
   botaoBorda();
   areaDigitavel.addEventListener('input', inputDeEntrada);
