@@ -13,8 +13,8 @@ function inputDeEntrada() {
 
 // limpa a imagem grande na tela
 function apagaElemento() {
-  if (document.getElementById(fotoId)) {
-    document.getElementById(fotoId).remove();
+  if (document.getElementById(fotoSelecionada)) {
+    document.getElementById(fotoSelecionada).remove();
   }
 }
 
