@@ -10,6 +10,20 @@ function inputDeEntrada() {
   retornaTextoDigitado.innerHTML = areaDigit;
 }
 
+// cria o efeito borda
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+function criaBorda(e) {
+  const elementoAlvo = e.target;
+  const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
+  memeImageContainer.style.border = cssSuporte;
+}
+
+// cria os botões interligados com a borda
+function botaoBorda() {
+  const botao = document.querySelectorAll('button');
+  botao.forEach((elementoAlvo) => elementoAlvo.addEventListener('click', criaBorda));
+}
+
 // limpa a imagem grande na tela
 function apagaElemento() {
   if (document.getElementById(fotoSelecionada)) {
@@ -35,22 +49,6 @@ function criaImagem() {
   } else {
     fotoVisual.src = '';
   }
-}
-
-// cria o efeito borda
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
-function criaBorda(e) {
-  const elementoAlvo = e.target;
-  const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
-  memeImageContainer.style.border = cssSuporte;
-}
-
-// cria os botões interligados com a borda
-function botaoBorda() {
-  const botao = document.querySelectorAll('button');
-  botao.forEach((elementoAlvo) => {
-    elementoAlvo.addEventListener('click', criaBorda);
-  });
 }
 
 // cria miniatura
