@@ -61,7 +61,7 @@ function criaMiniaturas(e) {
   const mini = e.target;
   const clona = mini.cloneNode(true);
   const cloneFilho = document.getElementById('meme-image-container').appendChild(clona);
-  cloneFilho.id = fotoId;
+  cloneFilho.id = fotoSelecionada;
 }
 // retorna miniatua natela
 function retornaMini() {
