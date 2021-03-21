@@ -1,5 +1,6 @@
 const areaDigitavel = document.getElementById('text-input');
 const fotoSelecionada = document.getElementById('meme-image');
+const fotoId = 'meme-image';
 const memeImageContainer = document.getElementById('meme-image-container');
 const retornaTextoDigitado = document.getElementById('meme-text');
 const memeInsert = document.getElementById('meme-insert');
@@ -12,8 +13,8 @@ function inputDeEntrada() {
 
 // limpa a imagem grande na tela
 function apagaElemento() {
-  if (fotoSelecionada) {
-    document.getElementById('meme-image').remove();
+  if (document.getElementById(fotoId)) {
+    document.getElementById(fotoId).remove();
   }
 }
 
@@ -23,7 +24,7 @@ function criaImagem() {
   apagaElemento();
   const criaImg = document.createElement('img');
   const imgFilho = memeImageContainer.appendChild(criaImg);
-  imgFilho.id = 'meme-image';
+  imgFilho.id = fotoId;
   const fotoVisual = document.querySelector('#meme-image');
   const carregarFoto = document.querySelector('#meme-insert[type=file]').files[0];
   const lerInput = new FileReader();
@@ -60,7 +61,7 @@ function criaMiniaturas(e) {
   const mini = e.target;
   const clona = mini.cloneNode(true);
   const cloneFilho = document.getElementById('meme-image-container').appendChild(clona);
-  cloneFilho.id = fotoSelecionada;
+  cloneFilho.id = fotoId;
 }
 // retorna miniatua natela
 function retornaMini() {
