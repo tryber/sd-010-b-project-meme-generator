@@ -1,6 +1,5 @@
 const areaDigitavel = document.getElementById('text-input');
-const fotoSelecionada = document.getElementById('meme-image');
-const fotoId = 'meme-image';
+const fotoSelecionada = 'meme-image';
 const memeImageContainer = document.getElementById('meme-image-container');
 const retornaTextoDigitado = document.getElementById('meme-text');
 const memeInsert = document.getElementById('meme-insert');
@@ -24,7 +23,7 @@ function criaImagem() {
   apagaElemento();
   const criaImg = document.createElement('img');
   const imgFilho = memeImageContainer.appendChild(criaImg);
-  imgFilho.id = fotoId;
+  imgFilho.id = fotoSelecionada;
   const fotoVisual = document.querySelector('#meme-image');
   const carregarFoto = document.querySelector('#meme-insert[type=file]').files[0];
   const lerInput = new FileReader();
@@ -77,5 +76,5 @@ window.onload = function inicio() {
   retornaMini();
   botaoBorda();
   areaDigitavel.addEventListener('input', inputDeEntrada);
-  memeInsert.addEventListener('input', criaImagem);
+  memeInsert.addEventListener('change', criaImagem);
 };
