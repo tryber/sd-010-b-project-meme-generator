@@ -12,8 +12,8 @@ function inputDeEntrada() {
 
 // limpa a imagem grande na tela
 function apagaElemento() {
-  if (document.getElementById(fotoSelecionada)) {
-    document.getElementById(fotoSelecionada).remove();
+  if (fotoSelecionada) {
+    document.getElementById('meme-image').remove();
   }
 }
 
@@ -23,7 +23,7 @@ function criaImagem() {
   apagaElemento();
   const criaImg = document.createElement('img');
   const imgFilho = memeImageContainer.appendChild(criaImg);
-  imgFilho.id = fotoSelecionada;
+  imgFilho.id = 'meme-image';
   const fotoVisual = document.querySelector('#meme-image');
   const carregarFoto = document.querySelector('#meme-insert[type=file]').files[0];
   const lerInput = new FileReader();
