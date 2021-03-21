@@ -23,7 +23,7 @@ function criaImagem() {
   apagaElemento();
   const criaImg = document.createElement('img');
   const imgFilho = memeImageContainer.appendChild(criaImg);
-  imgFilho.id = fotoSelecionada;
+  imgFilho.id = 'meme-image';
   const fotoVisual = document.querySelector('#meme-image');
   const carregarFoto = document.querySelector('#meme-insert[type=file]').files[0];
   const lerInput = new FileReader();
@@ -60,7 +60,7 @@ function criaMiniaturas(e) {
   const mini = e.target;
   const clona = mini.cloneNode(true);
   const cloneFilho = document.getElementById('meme-image-container').appendChild(clona);
-  cloneFilho.id = fotoSelecionada;
+  cloneFilho.id = 'meme-image';
 }
 // retorna miniatua natela
 function retornaMini() {
