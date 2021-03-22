@@ -38,8 +38,8 @@ function criaImagem() {
   const criaImg = document.createElement('img');
   const img = memeImageContainer.appendChild(criaImg);
   img.id = fotoSelecionada;
-  const fotoVisual = document.querySelector('#meme-image');
-  const carregarFoto = document.querySelector('#meme-insert[type=file]').files[0];
+  const fotoVisual = document.querySelector('meme-image');
+  const carregarFoto = document.querySelector('meme-insert[type=file]').files[0];
   const lerInput = new FileReader();
   lerInput.onloadend = function func() {
     fotoVisual.src = lerInput.result;
