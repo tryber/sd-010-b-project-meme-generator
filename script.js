@@ -57,7 +57,7 @@ function criaMiniaturas(e) {
   apagaElemento();
   const mini = e.target;
   const clona = mini.cloneNode(true);
-  const img = document.getElementById('meme-image-container').appendChild(clona);
+  const img = memeImageContainer.appendChild(clona);
   img.id = fotoSelecionada;
 }
 // retorna miniatua natela
