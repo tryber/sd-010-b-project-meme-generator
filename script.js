@@ -7,8 +7,8 @@ const memeInsert = document.getElementById('meme-insert');
 // console.log(fotoSelecionada + 'oi');
 // cria o efeito borda
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
-function criaBorda(e) {
-  const elementoAlvo = e.target;
+function criaBorda(event) {
+  const elementoAlvo = event.target;
   const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
   memeImageContainer.style.border = cssSuporte;
 }
@@ -53,9 +53,9 @@ function criaImagem() {
 
 // cria miniatura
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/cloneNode
-function criaMiniaturas(e) {
+function criaMiniaturas(event) {
   apagaElemento();
-  const mini = e.target;
+  const mini = event.target;
   const clona = mini.cloneNode(true);
   const img = memeImageContainer.appendChild(clona);
   img.id = fotoSelecionada;
