@@ -63,8 +63,8 @@ function criaMiniaturas(e) {
 // retorna miniatua natela
 function retornaMini() {
   const pegaMini = document.querySelectorAll('#samples img');
-  pegaMini.forEach((elementoAlvo) => {
-    elementoAlvo.addEventListener('click', criaMiniaturas);
+  pegaMini.forEach((mini) => {
+    mini.addEventListener('click', criaMiniaturas);
   });
 }
 
