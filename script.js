@@ -5,17 +5,17 @@ const retornaTextoDigitado = document.getElementById('meme-text');
 const memeInsert = document.getElementById('meme-insert');
 // console.log(retornaTextoDigitado + 'oi');
 // console.log(fotoSelecionada + 'oi');
-function inputDeEntrada() {
-  const areaDigit = areaDigitavel.value;
-  retornaTextoDigitado.innerHTML = areaDigit;
-}
-
 // cria o efeito borda
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 function criaBorda(e) {
   const elementoAlvo = e.target;
   const cssSuporte = window.getComputedStyle(elementoAlvo).getPropertyValue('border');
   memeImageContainer.style.border = cssSuporte;
+}
+
+function inputDeEntrada() {
+  const areaDigit = areaDigitavel.value;
+  retornaTextoDigitado.innerHTML = areaDigit;
 }
 
 // cria os botões interligados com a borda
@@ -38,8 +38,8 @@ function criaImagem() {
   const criaImg = document.createElement('img');
   const img = memeImageContainer.appendChild(criaImg);
   img.id = fotoSelecionada;
-  const fotoVisual = document.querySelector('meme-image');
-  const carregarFoto = document.querySelector('meme-insert[type=file]').files[0];
+  const fotoVisual = document.querySelector('#meme-image');
+  const carregarFoto = document.querySelector('#meme-insert[type=file]').files[0];
   const lerInput = new FileReader();
   lerInput.onloadend = function func() {
     fotoVisual.src = lerInput.result;
