@@ -10,17 +10,17 @@
 
 #meme-image-container {
   position: relative;
-  max-width: 500px;
+  width: 500px;
   height: 500px;
   border: 1px solid black;
   overflow: hidden;
-  background-color: white;
   text-overflow: clip;
+  background-color: white;
 }
 
 #meme-image {
   z-index: -1;
-  max-width: 500px;
+  width: 500px;
   width: 500px;
 }
 
