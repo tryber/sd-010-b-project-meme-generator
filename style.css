@@ -44,7 +44,9 @@
   text-align: center;
   position: absolute;
   font-size: 30px;
-  font-family: Impact, Haettenschweiler, 'Arial', sans-serif;
+  text-shadow: 5px 5px 5px black;
+  color: white;
+  font-family: Impact, Haettenschweiler, Arial, sans-serif;
 }
 
 #meme-insert {

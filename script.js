@@ -12,8 +12,6 @@ function create() {
   getInputText.addEventListener('keyup', write);
 }
 
-
-
 window.onload = function () {
   create();
 };
