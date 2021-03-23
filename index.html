@@ -8,12 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Meme Generator</h1>
-
-  <input id="text-input" type="text">
-  <div id="meme-image-container">
-    <div id="meme-text"></div>
-    <img src="images/images.png" alt="">
+  <div class="container-meme">
+    <section class="container-meme-input">
+      <h1>Meme Generator</h1>
+      <input id="text-input" type="text">
+      <input type="file" name="" id="meme-insert">
+    </section>
+    
+    <section id="meme-image-container">
+      <div id="meme-text"></div>
+      <img id="meme-image" src="images/images.png" alt="Imagem do Meme">
+    </section>
   </div>
 
   <script src="script.js"></script>

@@ -1,19 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-meme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  
+}
+
+.container-meme-input {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#text-input {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
 #meme-image-container {
   border: 1px solid black;
   width: 400px;
   height: 400px;
   margin: 20px;
-  padding: 10px;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 
 #meme-text {
+  text-align: center;
   position: absolute;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#meme-insert {
+  margin: 10px;
 }
 
 img {
-  border: 1px solid black;
   width: 100%;
   height: 100%;
 }
