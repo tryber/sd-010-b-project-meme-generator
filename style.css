@@ -1,0 +1,65 @@
+nav img {
+  border: 3px solid black;
+  margin: 15px 30px;
+  width: 100px;
+  height: 100px;
+}
+
+div img , span {
+  position: absolute;
+}
+
+div img {
+  width: 300px;
+  height: 350px;
+}
+
+div {
+  background-color: white;
+  margin: 15px;
+  width: 300px;
+  height: 350px;
+  position: relative;
+}
+
+#meme-text {
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
+  color: white;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.borderDefault {
+  border: 1px solid black;
+}
+
+.borderFire {
+  border: 3px dashed red;
+}
+
+.borderWater {
+  border: 5px double blue;
+}
+
+.borderEarth {
+  border: 6px groove green;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  color: white;
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
+
+button {
+  margin: 10px;
+}
+
